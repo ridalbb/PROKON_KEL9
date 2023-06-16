@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:aplikasi_reservasi_travel_bus/myticketpage/myticket.dart';
 import 'package:aplikasi_reservasi_travel_bus/homepage/homepage.dart';
+import 'package:aplikasi_reservasi_travel_bus/settingspage/settingspage.dart';
+import 'package:aplikasi_reservasi_travel_bus/personaldatapage/personaldatapage.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -73,7 +75,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       ),
                       SizedBox(height: 5),
                       Text(
-                        '081222211233',
+                        '081122223333',
                         textAlign: TextAlign.left,
                       ),
                       Text(
@@ -111,7 +113,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   ],
                 ),
                 onTap: () {
-                  // Navigate to Personal Data page
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PersonalDataPage()),
+                  );
                 },
               ),
             ),
@@ -127,7 +132,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   ],
                 ),
                 onTap: () {
-                  // Navigate to Settings page
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SettingsPage()),
+                  );
                 },
               ),
             ),
